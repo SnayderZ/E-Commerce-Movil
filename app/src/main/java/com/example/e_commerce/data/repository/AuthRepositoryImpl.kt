@@ -9,8 +9,7 @@ import com.example.e_commerce.domain.repository.AuthRepository
 import java.io.IOException
 
 class AuthRepositoryImpl(
-    private val authApi: AuthApi = ApiClient.authApi
-) : AuthRepository {
+    private val authApi: AuthApi = ApiClient.authApi) : AuthRepository {
     override suspend fun login(email: String, password: String): Result<AuthUser> {
         return try {
             val response = authApi.login(
