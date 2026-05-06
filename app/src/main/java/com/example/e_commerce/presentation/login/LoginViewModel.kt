@@ -2,6 +2,7 @@ package com.example.e_commerce.presentation.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavController
 import com.example.e_commerce.data.repository.AuthRepositoryImpl
 import com.example.e_commerce.domain.usecase.LoginUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -28,7 +29,7 @@ class LoginViewModel(
         }
     }
 
-    fun login() {
+    fun login(navController: NavController) {
         val email = _uiState.value.email.trim()
         val password = _uiState.value.password
 
@@ -70,6 +71,10 @@ class LoginViewModel(
                             },
                             isLoginSuccessful = hasToken
                         )
+                    }
+                    if (hasToken){
+                        //navegar a la pantalla primcipal
+                        navController.navigate("main")
                     }
                 },
                 onFailure = { exception ->

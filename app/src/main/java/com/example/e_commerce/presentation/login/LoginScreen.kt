@@ -24,10 +24,12 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.e_commerce.ui.theme.ECommerceTheme
 
 @Composable
 fun LoginScreen(
+    navController: NavController,
     viewModel: LoginViewModel,
     modifier: Modifier = Modifier
 ) {
@@ -37,7 +39,7 @@ fun LoginScreen(
         uiState = uiState,
         onEmailChange = viewModel::onEmailChange,
         onPasswordChange = viewModel::onPasswordChange,
-        onLoginClick = viewModel::login,
+        onLoginClick = {viewModel.login(navController)},
         modifier = modifier
     )
 }

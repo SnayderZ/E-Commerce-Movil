@@ -1,9 +1,9 @@
 package com.example.e_commerce.data.repository
 
 import com.example.e_commerce.data.mapper.toDomain
-import com.example.e_commerce.data.remote.api.ApiClient
-import com.example.e_commerce.data.remote.api.AuthApi
-import com.example.e_commerce.data.remote.dto.LoginRequestDto
+import com.example.e_commerce.data.remote.api.ClientApi.ApiClient
+import com.example.e_commerce.data.remote.api.AuthApi.AuthApi
+import com.example.e_commerce.data.remote.dto.Auth.LoginRequestDto
 import com.example.e_commerce.domain.model.AuthUser
 import com.example.e_commerce.domain.repository.AuthRepository
 import java.io.IOException

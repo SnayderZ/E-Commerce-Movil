@@ -1,4 +1,4 @@
-package com.example.e_commerce.data.remote.dto
+package com.example.e_commerce.data.remote.dto.Auth
 
 import com.google.gson.annotations.SerializedName
 

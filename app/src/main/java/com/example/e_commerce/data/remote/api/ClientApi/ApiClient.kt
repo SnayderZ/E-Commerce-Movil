@@ -1,5 +1,6 @@
-package com.example.e_commerce.data.remote.api
+package com.example.e_commerce.data.remote.api.ClientApi
 
+import com.example.e_commerce.data.remote.api.AuthApi.AuthApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
