@@ -9,7 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.e_commerce.presentation.login.LoginScreen
-import com.example.e_commerce.presentation.main.MainScreenDC
+import com.example.e_commerce.presentation.main.MainViewModel
 import com.example.e_commerce.presentation.login.LoginViewModel
 import com.example.e_commerce.ui.theme.ECommerceTheme
 
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                         LoginScreen(navController = navController, viewModel = loginViewModel) // Pasa el navController a LoginScreen
                     }
                     composable("main") {
-                        MainScreenDC("Hola mundo ") // Pantalla principal después de login exitoso
+                        MainViewModel("Hola mundo ") // Pantalla principal después de login exitoso
                     }
                 }
             }
